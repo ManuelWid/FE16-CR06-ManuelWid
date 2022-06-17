@@ -1,0 +1,18 @@
+<div class="container mx-auto">
+    <ng-template [ngIf]="data.status == 200" [ngIfElse]="notFound">
+        <div class="row row-cols-1 row-cols-md-2 my-5">
+            <img src="{{ data.image }}" alt="" class="col">
+            <div class="col">
+                <h5>{{ data.name }}</h5>
+                <p>{{ data.description }}</p>
+                <p>Price: {{ data.price }}€</p>
+                <div *ngIf="data.stock == 1">
+                    <button (click)="addOrder()" class="btn btn-outline-success">Order</button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #notFound>
+        <p class="text-danger text-center mt-3">Data not found</p>
+    </ng-template>
+</div>

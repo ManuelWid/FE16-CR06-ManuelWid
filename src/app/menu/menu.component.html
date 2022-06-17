@@ -1,0 +1,31 @@
+<div class="container row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 mx-auto my-3">
+    <ng-template [ngIf]="data.data != null" [ngIfElse]="noData">
+        <div class="col" *ngFor="let item of data.data; let i = index">
+            <div class="card">
+                <img src="{{item.image}}" class="card-img-top card-pic" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text">{{item.description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Price: {{item.price}}€</li>
+                </ul>
+                <div class="card-body">
+                    <ng-template [ngIf]="item.stock == 1" [ngIfElse]="noStock">
+                        <div class="d-flex justify-content-evenly">
+                            <a routerLink="/details/{{item.id}}" class="card-link"><button class="btn btn-outline-success">Details</button></a>
+                            <button (click)="addOrder(i)" class="btn btn-outline-warning">Order</button>
+                        </div>
+                    </ng-template>
+                    <ng-template #noStock>
+                        <span class="text-danger">Not available</span>
+                    </ng-template>
+                    
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #noData>
+        <p>No data found.</p>
+    </ng-template>
+</div>

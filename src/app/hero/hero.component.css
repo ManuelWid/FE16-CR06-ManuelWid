@@ -1,0 +1,11 @@
+.hero {
+    height: 50vh;
+    background: url("https://cdn.pixabay.com/photo/2018/06/23/13/30/restaurant-3492711_960_720.jpg") no-repeat scroll center;
+    background-size: cover;
+}
+
+.heroBox {
+    width: 100%;
+    padding: 3vh 0;
+    background-color: rgba(0, 0, 0, .6)
+}

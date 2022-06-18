@@ -38,6 +38,7 @@ export class OrderComponent implements OnInit {
 
   onSubmit(){
     window.alert("Order placed");
+    console.log(this.orderForm.value);
     this.items = this.oS.clearCart();
     this.orderForm.reset();
     this.clearPrice();

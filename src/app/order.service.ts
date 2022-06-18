@@ -23,8 +23,13 @@ export class OrderService {
     return this.total;
   }
 
+  clearTotal() {
+    this.total = 0;
+  }
+
   clearCart() {
     this.items = [];
+    this.clearTotal();
     return this.items;
   }
 }

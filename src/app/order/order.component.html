@@ -1,6 +1,6 @@
 <div class="container my-4">
     <div class="row gap-3 gap-sm-0">
-        <div class="col-12 col-sm-9">
+        <div class="col-12 col-sm-8">
             <div class="card">
                 <div class="card-header fw-bold h6">Order {{ items.length }} items</div>
                 <ul class="list-group list-group-flush">
@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-sm-3">
+        <div class="col-12 col-sm-4">
             <div class="card">
                 <div class="card-header fw-bold h6">Summary</div>
                 <ul class="list-group list-group-flush">
@@ -52,4 +52,23 @@
             </div>
         </div>
     </div>
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()" class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+        <div class="d-flex flex-column col">
+            <label for="fName">First name:</label>
+            <input type="text" id="fName" formControlName="firstName">
+        </div>
+        <div class="d-flex flex-column col">
+            <label for="lName">Last name:</label>
+            <input type="text" id="lName" formControlName="lastName">
+        </div>
+        <div class="d-flex flex-column col">
+            <label for="address">Address:</label>
+            <input type="text" id="address" formControlName="address">
+        </div>
+        <div class="d-flex flex-column col">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" formControlName="phone">
+        </div>
+        <button class="btn btn-outline-success mt-3" type="submit">Order</button>
+    </form>
 </div>

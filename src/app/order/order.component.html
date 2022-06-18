@@ -1,4 +1,4 @@
-<div class="container my-4">
+<div class="container my-4 d-flex flex-column">
     <div class="row gap-3 gap-sm-0">
         <div class="col-12 col-sm-8">
             <div class="card">
@@ -69,6 +69,10 @@
             <label for="phone">Phone:</label>
             <input type="text" id="phone" formControlName="phone">
         </div>
-        <button class="btn btn-outline-success mt-3" type="submit">Order</button>
+        <div class="w-50 mt-3">
+            <button class="btn btn-outline-success w-100" type="submit">Order</button>
+        </div>
+        
     </form>
+    <button class="btn btn-outline-danger mt-5 w-25 align-self-end" (click)="clearOrder()">Cancel order</button>
 </div>

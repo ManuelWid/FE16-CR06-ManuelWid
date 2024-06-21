@@ -1,3 +1,9 @@
+Very old angular project form my time as a student, fresh into coding.
+For this project I built an API with PHP to fetch my data instead of having it locally as array as the task originally intended.
+Unfortunately it seems that I lost the API since then..
+
+
+
 # FE16CR06ManuelWid
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
